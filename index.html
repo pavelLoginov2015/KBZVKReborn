@@ -22,7 +22,8 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">MadnessCubed</div>
+        <div id="unity-friends-button"></div>
+        <div id="unity-build-title"></div> 
       </div>
     </div>
     <script>
@@ -43,6 +44,7 @@
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var friendsbutton = document.querySelector("#unity-friends-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -62,7 +64,7 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "940px";
+        canvas.style.width = "840px";
         canvas.style.height = "620px";
       }
       loadingBar.style.display = "block";
