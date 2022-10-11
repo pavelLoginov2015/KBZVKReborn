@@ -22,8 +22,10 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-friends-button"></div>
         <div id="unity-build-title"></div> 
+        <div id="unity-bok-button"></div>
+         <div id="unity-group-button"></div>
+         <div id="unity-friend-button"></div>
       </div>
     </div>
     <script>
@@ -44,7 +46,7 @@
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var friendsbutton = document.querySelector("#unity-friends-button");
+      var groupbutton = document.querySelector("#unity-group-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 
       // By default Unity keeps WebGL canvas render target size matched with
@@ -64,8 +66,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "840px";
-        canvas.style.height = "620px";
+        canvas.style.width = "960px";
+        canvas.style.height = "720px";
       }
       loadingBar.style.display = "block";
 
@@ -79,6 +81,9 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
+          groupbutton.onclick = () => {
+      unityInstance.Set("OpenUrl","https://vk.com/club216035193");
+      };
         }).catch((message) => {
           alert(message);
         });
